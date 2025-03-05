@@ -44,6 +44,6 @@ Usando docker compose:
     - Cargar datos de penguins a la base de datos, sin preprocesamiento!
 	- Realizar preprocesamiento para entrenamiento de modelo
 	- Realizar entrenamiento de modelo usando datos preprocesados de la base de datos 
-	- Cree API que permita realizar inferencia al modelo entrenado
+4. Cree API que permita realizar inferencia al modelo entrenado
 
 Todos los servicios deben existir en el mismo docker compose!
