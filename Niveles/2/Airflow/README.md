@@ -31,7 +31,7 @@ AIRFLOW__CORE__LOAD_EXAMPLES: 'true'
 Explore los ejemplos básicos expuestos en este repositorio.
 Para continuar con la exploración de airflow, se propone crear un workflow. Para esto debe definir primero la arquitectura que dará soporte a su experimentación. Cree un primer contenedor que contenga una base de datos a la cual desea ingresar información. Un segundo contenedor, que aloje archivos planos con la información origen. En el contenedor de airflow, cree los DAGs necesarios para consumir periódicamente los archivos de texto plano y realice procesamiento que considere necesario para llevarlos a la base de datos creada.
 
-## Taller 3
+## Taller Airflow
 
 Usando docker compose:
 
@@ -40,10 +40,10 @@ Usando docker compose:
 2. Cree una instancia de Airflow
 
 3. Cree los DAG necesarios que le permitan:
-
-    - Cargar datos de penguins, sin preprocesamiento!
 	- Borrar contenido base de datos
-	- Realizar entrenamiento de modelo usando datos de la base de datos (realizando procesamiento)
+    - Cargar datos de penguins a la base de datos, sin preprocesamiento!
+	- Realizar preprocesamiento para entrenamiento de modelo
+	- Realizar entrenamiento de modelo usando datos preprocesados de la base de datos 
+	- Cree API que permita realizar inferencia al modelo entrenado
 
-Bono
-- Cree API que permita realizar inferencia al modelo entrenado
+Todos los servicios deben existir en el mismo docker compose!
