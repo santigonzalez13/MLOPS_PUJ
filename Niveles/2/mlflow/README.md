@@ -104,4 +104,22 @@ docker build -t jupyterlab .
 docker run -it --name jupyterlab --rm -e TZ=America/Bogota -p 8888:8888 -v $PWD:/work jupyterlab:latest
 ```
 
+## Taller MLflow
 
+- Cree al menos una instancia de una base de datos
+
+- Cree una instancia de MLflow (no use sqlite)
+
+- Cree una instancia de MINio
+
+- Cree una instancia de JupyterLab
+
+    Cree un notebook que permita realizar entrenamiento de un modelo, realize multiples ejecuciones a modo de experimentacion (al menos 20, con variaciones de hyperparámetros), todo debe estar registrado en MLflow.
+
+    Los datos deben existir en una base de datos, los datos procesados deben estar en base de datos.
+
+    Los modelos deben estar registrados en MLflow
+
+- Cree API que permita realizar inferencia al modelo entrenado, tomando el modelo **mediante** MLflow
+
+Use la misma estructura definida en este archivo README.
