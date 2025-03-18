@@ -8,7 +8,8 @@ La información se entrega mediante una API, la cual requiere el numero del grup
 
 Los datos serán obtenidos a través de una API externa expuesta en la maquina virtual asignada al profesor alojada en la dirección IP http://10.43.101.149:80. Esta API proporcionará un conjunto de datos aleatorios que cambiarán cada 5 minutos. Los estudiantes deberán implementar un mecanismo para recolectar estos datos usando Airflow y utilizarlos para entrenar un modelo de IA en el entorno de MLflow.
 
-El conjunto de datos fue divido en 10 partes (batch), por lo tanto para obtener cada una de esas 10 partes se debe hacer una petición, a la cual solo se solicitará el numero del grupo asignado en la petición. Esta petición retornará una porción aleatoria de los datos del batch actual. A partir de ese momento y durante los 5 minutos siguientes a la petición, se entregará información una porción aleatoria de el batch de información actual, después de esos 5 minutos se cambiaré el batch y se repetirá la condición de los 5 minutos nuevamente. Tenga en cuenta que para lograr
+El conjunto de datos fue divido en 10 partes (batch), por lo tanto para obtener cada una de esas 10 partes se debe hacer una petición, a la cual solo se solicitará el numero del grupo asignado en la petición. Esta petición retornará una porción aleatoria de los datos del batch actual. A partir de ese momento y durante los 5 minutos siguientes a la petición, se entregará información una porción aleatoria de el batch de información actual, después de esos 5 minutos se cambiaré el batch y se repetirá la condición de los 5 minutos nuevamente. Tenga en cuenta que para lograr tener una muestra mínima
+de los datos debe extraer al menos, una porción de datos de cada batch.
 
 Si desea reiniciar la recolección de información la API tiene un metodo para reiniciar el batch actual.
 
